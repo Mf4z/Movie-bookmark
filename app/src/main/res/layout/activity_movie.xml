@@ -83,7 +83,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/editText_timeStamp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -92,9 +92,8 @@
         android:hint="Time stamp"
         android:inputType="time"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout_seasonNepisode"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout_seasonNepisode"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup_movieType"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup_movieType"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout_seasonNepisode" />
 
     <RatingBar
@@ -102,8 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/editText6"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintEnd_toEndOf="@+id/editText_timeStamp"
+        app:layout_constraintStart_toStartOf="@+id/editText_timeStamp"
+        app:layout_constraintTop_toBottomOf="@+id/editText_timeStamp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
