@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Movie Bookmark</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_top_movies">Top Movies</string>
+    <string name="tab_watching">Watching</string>
+    <string name="tab_top_series">Top Series</string>
     <string name="movie">Movie</string>
     <string name="season">Season</string>
     <string name="episode">Episode</string>
