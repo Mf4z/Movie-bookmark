@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MovieActivity">
@@ -67,7 +68,9 @@
             android:ems="10"
             android:hint="@string/season"
             android:inputType="number"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:layout_marginRight="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
 
         <EditText
             android:id="@+id/editText_episode"
@@ -78,7 +81,18 @@
             android:hint="@string/episode"
             android:inputType="number"
             android:textAlignment="center"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_marginRight="8dp"/>
+
+        <EditText
+            android:id="@+id/editText_episode_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/episode_name"
+            android:inputType="textMultiLine" />
 
     </LinearLayout>
 
