@@ -9,15 +9,17 @@ public class MovieInfo implements Parcelable {
     private String mSeason;
     private String mEpisode;
     private String mEpisodeName;
+    private String mTimeStamp;
     private String mRating;
 
 
-    public MovieInfo(int mId, String mMovieType, String mSeason, String mEpisode, String mEpisodeName, String mRating) {
+    public MovieInfo(int mId, String mMovieType, String mSeason, String mEpisode, String mEpisodeName,String mTimeStamp, String mRating) {
         this.mId = mId;
         this.mMovieType = mMovieType;
         this.mSeason = mSeason;
         this.mEpisode = mEpisode;
         this.mEpisodeName = mEpisodeName;
+        this.mTimeStamp = mTimeStamp;
         this.mRating = mRating;
     }
 
@@ -28,6 +30,7 @@ public class MovieInfo implements Parcelable {
         mSeason = source.readString();
         mEpisode = source.readString();
         mEpisodeName = source.readString();
+        mTimeStamp = source.readString();
         mRating = source.readString();
 
     }
@@ -81,6 +84,14 @@ public class MovieInfo implements Parcelable {
         this.mRating = mRating;
     }
 
+    public String getmTimeStamp() {
+        return mTimeStamp;
+    }
+
+    public void setmTimeStamp(String mTimeStamp) {
+        this.mTimeStamp = mTimeStamp;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -94,6 +105,7 @@ public class MovieInfo implements Parcelable {
         dest.writeString(mSeason);
         dest.writeString(mEpisode);
         dest.writeString(mEpisodeName);
+        dest.writeString(mTimeStamp);
         dest.writeString(mRating);
     }
 

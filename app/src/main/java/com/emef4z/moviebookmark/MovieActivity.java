@@ -1,17 +1,16 @@
 package com.emef4z.moviebookmark;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MovieActivity extends AppCompatActivity {
 
+    public static final String MOVIE_INFO = "com.emef4z.moviebookmark.MOVIE_INFO";
     private LinearLayout seasonNepisode;
     private RadioButton movie_radioBtn;
     private RadioButton series_radioBtn;
