@@ -7,4 +7,7 @@
     <string name="season">Season</string>
     <string name="episode">Episode</string>
     <string name="episode_name">Episode name</string>
+    <string name="movie_series_name">Movie/Series Name</string>
+    <string name="season">Season</string>
+    <string name="timestamp">Timestamp</string>
 </resources>
