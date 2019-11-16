@@ -5,6 +5,7 @@ import android.os.Parcelable;
 
 public class MovieInfo implements Parcelable {
     private int mId;
+    private String mMovieName;
     private String mMovieType;
     private String mSeason;
     private String mEpisode;
@@ -12,9 +13,12 @@ public class MovieInfo implements Parcelable {
     private String mTimeStamp;
     private String mRating;
 
+    public MovieInfo(){}
 
-    public MovieInfo(int mId, String mMovieType, String mSeason, String mEpisode, String mEpisodeName,String mTimeStamp, String mRating) {
+    public MovieInfo(int mId,String mMovieName, String mMovieType, String mSeason, String mEpisode, String mEpisodeName,String mTimeStamp, String mRating) {
+        this();
         this.mId = mId;
+        this.mMovieName = mMovieName;
         this.mMovieType = mMovieType;
         this.mSeason = mSeason;
         this.mEpisode = mEpisode;
@@ -26,6 +30,7 @@ public class MovieInfo implements Parcelable {
     private MovieInfo(Parcel source) {
 
         mId = source.readInt();
+        mMovieName = source.readString();
         mMovieType = source.readString();
         mSeason = source.readString();
         mEpisode = source.readString();
@@ -38,6 +43,14 @@ public class MovieInfo implements Parcelable {
 
     public int getmId() {
         return mId;
+    }
+
+    public String getMovieName() {
+        return mMovieName;
+    }
+
+    public void setMovieName(String movieName) {
+        mMovieName = movieName;
     }
 
     public void setmId(int mId) {
@@ -101,6 +114,7 @@ public class MovieInfo implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
 
         dest.writeInt(mId);
+        dest.writeString(mMovieType);
         dest.writeString(mMovieType);
         dest.writeString(mSeason);
         dest.writeString(mEpisode);

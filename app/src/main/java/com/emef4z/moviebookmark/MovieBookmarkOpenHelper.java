@@ -22,6 +22,9 @@ public class MovieBookmarkOpenHelper extends SQLiteOpenHelper {
         db.execSQL(MovieInfoEntry.SQL_CREATE_TABLE);
         db.execSQL(MovieInfoEntry.SQL_CREATE_INDEX1);
 
+        DatabaseDataWorker worker = new DatabaseDataWorker(db);
+        worker.insertSampleMovies();
+
     }
 
     @Override
