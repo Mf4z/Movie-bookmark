@@ -32,8 +32,8 @@ public class MovieBookmarkDatabaseContract {
                 _ID+" INTEGER PRIMARY KEY, " +
                 COLUMN_MOVIE_NAME+" TEXT NOT NULL, "+
                 COLUMN_MOVIE_TYPE+" TEXT NOT NULL, "+
-                COLUMN_MOVIE_EPISODE +" TEXT NOT NULL, "+
-                COLUMN_MOVIE_SEASON +" TEXT NOT NULL, "+
+                COLUMN_MOVIE_EPISODE +" TEXT, "+
+                COLUMN_MOVIE_SEASON +" TEXT, "+
                 COLUMN_MOVIE_EPISODE_NAME +" TEXT, "+
                 COLUMN_MOVIE_TIMESTAMP + " TEXT NOT NULL, "+
                 COLUMN_MOVIE_RATING +" TEXT NOT NULL)";

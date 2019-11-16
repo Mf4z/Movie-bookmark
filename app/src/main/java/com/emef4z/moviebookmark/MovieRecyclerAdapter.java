@@ -12,12 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.emef4z.moviebookmark.MovieBookmarkDatabaseContract.MovieInfoEntry;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdapter.ViewHolder> {
 
-    private Context mContext;
-    private Cursor mCursor;
-    private LayoutInflater mInflater;
+    private final Context mContext;
+    private   Cursor mCursor;
+    private final LayoutInflater mInflater;
     private int mPosId;
     private int mMovieNamePos;
     private int mMovieTypePos;
@@ -123,7 +124,7 @@ public class MovieRecyclerAdapter extends RecyclerView.Adapter<MovieRecyclerAdap
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    Snackbar.make(v,mId+" Clicked",Snackbar.LENGTH_LONG).show();
                 }
             });
 

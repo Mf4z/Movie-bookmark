@@ -15,6 +15,7 @@ public class WatchingFragment extends Fragment {
 
     private MovieBookmarkOpenHelper mOpenHelper;
     private RecyclerView mRecyclerItems;
+    private MovieRecyclerAdapter mAdapter;
     private LinearLayoutManager mLinearLayoutManager;
 
 
@@ -41,6 +42,15 @@ public class WatchingFragment extends Fragment {
 
         mRecyclerItems = (RecyclerView)rootView.findViewById(R.id.recyclerView_list);
         mLinearLayoutManager = new LinearLayoutManager(getContext());
+        mAdapter = new MovieRecyclerAdapter(getContext(),null);
+
+        displayMovies();
+
+    }
+
+    private void displayMovies() {
+        mRecyclerItems.setAdapter(mAdapter);
+        mRecyclerItems.setLayoutManager(mLinearLayoutManager);
 
     }
 }
